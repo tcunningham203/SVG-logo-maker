@@ -89,7 +89,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# COMMENTED OUT "dist" as suggested by the project instructions.
 
 # Gatsby files
 .cache/
@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# other stuff recommended
+node_modules
+package-lock.json
+.vscode
+.DS_Store
