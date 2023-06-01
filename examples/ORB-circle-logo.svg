@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="300">
-        <rect x="15" y="22" width="170" height="170" fill="green"/> 
-        <text fill="black" font-weight="600" font-size="70" font-family="Century Gothic" x="50%" y="35%" dominant-baseline="middle" text-anchor="middle">ger</text>
+        <circle cx="100" cy="100" r="100" fill="green"/> 
+        <text fill="yellow" font-weight="600" font-size="70" font-family="Century Gothic" x="50%" y="35%" dominant-baseline="middle" text-anchor="middle">ORB</text>
         </svg>

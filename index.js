@@ -13,7 +13,7 @@ const questions = [
     {
         name: 'letters',
         type: 'input',
-        message: 'The following is a series of questions to help you create your SVG logo. First, the logo text. Type up to 3 letters to be printed on your logo, then press enter.',
+        message: 'The following is a series of questions to help you create your SVG logo. First, the logo text. Type up to 3 letters to be printed on your logo. If you write lowercase letters, they will appear lowercase, and visa versa. When you are finished, press enter.',
         maxLength: 3
         
     },
