@@ -47,3 +47,5 @@ I copied the suggested file structure from the project instructions.
 I used various learning resources like Stack Overflow and W3 schools to help with random questions I had. 
 
 I used the Inquirer.js documentation and Jest documentation a lot for this project as well to help create my code. 
+
+In order to limit the letters on the SVG to 3 characters or less, I used this package and its documentation: https://www.npmjs.com/package/inquirer-maxlength-input-prompt
