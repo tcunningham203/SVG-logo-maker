@@ -48,4 +48,6 @@ I used various learning resources like Stack Overflow and W3 schools to help wit
 
 I used the Inquirer.js documentation and Jest documentation a lot for this project as well to help create my code. 
 
+I used the SVG extension to help create the shapes in the shapes.js file. 
+
 In order to limit the letters on the SVG to 3 characters or less, I used this package and its documentation: https://www.npmjs.com/package/inquirer-maxlength-input-prompt

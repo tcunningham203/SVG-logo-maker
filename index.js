@@ -1,14 +1,14 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt')
 const fs = require('fs');
 inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt)
 // Links this to the generate markdown javascript file in the utils folder
-const generateMarkdown = require('./utils/generateMarkdown');
+const {svgGen} = require('./lib/shapes.js');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 
-// The questions asked were chosen based on the requirements for the assignment, as well as the "Professional Readme Guide" found in the credits section of this repository's readme.
+// The questions asked were chosen based on the requirements for the assignment.
 const questions = [
     {
         name: 'letters',
@@ -18,7 +18,7 @@ const questions = [
         
     },
     {
-        name: 'color',
+        name: 'txtcolor',
         type: 'input',
         message: 'What color would you like for your logo text? Type a color or hex code, then press enter.',
         
@@ -27,17 +27,17 @@ const questions = [
     {
         name: 'shape',
         type: 'list',
-        message: 'Which shape would you like as the background of the logo? Use the up and down arrow keys to select an option, then press enter.',
+        message: 'Which background shape would you like as the background of the logo? Use the up and down arrow keys to select an option, then press enter.',
         choices: [
-            "Circle",
-            "Triangle",
-            "Square",
+            "Circular background",
+            "Triangular background",
+            "Square background",
      
         ],
         
     },
     {  
-        name: 'github',
+        name: 'bgcolor',
         type: 'input',
         message: 'Final question: What color would you like for your background shape? Type a color or hex code, then press enter.',
     },
@@ -45,7 +45,7 @@ const questions = [
 
 ];
 
-// TODO: Create a function to write README file
+// Function to write SVG file
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
@@ -54,7 +54,7 @@ function writeToFile(fileName, data) {
 };
 
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
 
 // The code within this function was largely taken from the inquirer documentation.
@@ -64,8 +64,8 @@ inquirer
   .then((answers) => {
     // Use user feedback for... whatever!!
     console.log("Creating logo...")
-// NOTE: For the purpose of not deleting the readme that came with this application, the filename created will be placed in the "Generated-README" folder.
-    writeToFile("./examples/README.md", generateMarkdown(answers))
+
+    writeToFile("./examples/logo.svg", svgGen(answers))
   })
   .catch((error) => {
     if (error.isTtyError) {
