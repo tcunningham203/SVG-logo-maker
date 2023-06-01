@@ -49,7 +49,7 @@ const questions = [
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
-        err ? console.log(err) : console.log('All done! View your logo in the examples folder. If you want to make a new logo without erasing this one, please rename this logo to something else.')
+        err ? console.log(err) : console.log('Generated logo.svg! View your logo in the examples folder. If you want to make a new logo without erasing this one, please rename this logo to something else.')
     });
 };
 
